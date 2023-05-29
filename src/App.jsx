@@ -10,6 +10,7 @@ function App() {
       <a href="https://www.npmjs.com/package/tailwind-styled-components">
         클릭하세요
       </a>
+      <p>test</p>
     </>
   );
 }
