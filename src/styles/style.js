@@ -2,5 +2,5 @@
 import tw from 'tailwind-styled-components';
 
 export const Container = tw.div`
-  w-[390px] h-[844px] bg-bgPurple flex flex-col
+  w-[390px] h-screen bg-bgPurple flex flex-col
 `;
