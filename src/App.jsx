@@ -1,21 +1,39 @@
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import React, { useState } from 'react';
 import tw from 'tailwind-styled-components';
+import StartPage from './pages/StartPage';
+import QuestionPage from './pages/QuestionPage';
 
 function App() {
+  const [page, setPage] = useState(0);
+
   return (
-    <>
-      <h1 className="text-red-500">how to use Tailwind</h1>
-      <H>how to use Tailwind styled-compoenents</H>
-      <p>아래 링크에서 vscode setting 하셔야합니다</p>
-      <a href="https://www.npmjs.com/package/tailwind-styled-components">
-        클릭하세요
-      </a>
-    </>
+    <StyledApp>
+      <Iphone14Size>
+        <Routes>
+          <Route
+            path="/"
+            element={<StartPage page={page} setPage={setPage} />}
+          />
+          <Route
+            path="/main"
+            element={<QuestionPage page={page} setPage={setPage} />}
+          />
+        </Routes>
+      </Iphone14Size>
+    </StyledApp>
   );
 }
 
-const H = tw.h1`
-  text-red-500
+const StyledApp = tw.div`
+  flex
+  justify-center
+`;
+
+const Iphone14Size = tw.div`
+  w-[390px]
+  h-[844px]
 `;
 
 export default App;
