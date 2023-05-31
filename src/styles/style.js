@@ -4,3 +4,7 @@ import tw from 'tailwind-styled-components';
 export const Container = tw.div`
   w-[390px] h-screen bg-bgPurple flex flex-col
 `;
+
+export const Button = tw.button`
+bg-mainPurple rounded-[50px]
+`;

@@ -1,42 +1,34 @@
 import React from 'react';
-import virus from '../../public/mainVirus.svg';
+import virus from '../assets/mainVirus.svg';
+import testTitle from '../assets/title.png';
 import styled from 'styled-components';
 import 'animate.css';
-import { Container } from '../styles/style';
+import { Button, Container } from '../styles/style';
 import tw from 'tailwind-styled-components';
 
 const Start = () => {
   return (
-    <StartContinaer>
-      <div className="mt-[69px]">
-        <Title className="text-[60px]">바이러스</Title>
-        <Title className="text-[48px]">진단 테스트</Title>
-      </div>
-      <img src={virus} alt="" />
-      <button className="bg-mainPurple w-[280px] h-[78px] rounded-[50px] text-[34px] text-white">
-        테스트 시작하기
-      </button>
-      {/*테스트 공유 컴포넌트 */}
-      <div className="w-[270px] h-[82px]"></div>
-    </StartContinaer>
+    <StartContainer>
+      <Main>
+        <img src={testTitle} alt="바이러스진단테스트" />
+        <img src={virus} alt="virus" />
+        <StartButton className=" ">테스트 시작하기</StartButton>
+        <div className="w-[270px] h-[82px] bg-white">공유 컴포넌트 자리</div>
+      </Main>
+    </StartContainer>
   );
 };
 
-const StartContinaer = tw(Container)`
-justify-between items-center 
+const Main = tw.div`
+h-min-content flex flex-col justify-center gap-16 
 `;
 
-const Title = styled.p`
-  background: linear-gradient(
-    180.38deg,
-    #8059e6 27.84%,
-    rgba(128, 89, 230, 0.7) 44.67%,
-    #8059e6 63.01%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+const StartContainer = tw(Container)`
+items-center justify-center
+`;
+
+const StartButton = tw(Button)`
+w-[280px] h-[78px]  text-[34px] text-white
 `;
 
 export default Start;
