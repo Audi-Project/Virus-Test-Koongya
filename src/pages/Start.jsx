@@ -1,18 +1,22 @@
 import React from 'react';
 import virus from '../assets/mainVirus.svg';
 import testTitle from '../assets/title.png';
-import styled from 'styled-components';
 import 'animate.css';
 import { Button, Container } from '../styles/style';
 import tw from 'tailwind-styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const Start = () => {
+  const navigate = useNavigate();
+  const HandleToMainPage = () => {
+    navigate('/main');
+  };
   return (
     <StartContainer>
       <Main>
         <img src={testTitle} alt="바이러스진단테스트" />
         <img src={virus} alt="virus" />
-        <StartButton className=" ">테스트 시작하기</StartButton>
+        <StartButton onClick={HandleToMainPage}>테스트 시작하기</StartButton>
         <div className="w-[270px] h-[82px] bg-white">공유 컴포넌트 자리</div>
       </Main>
     </StartContainer>
