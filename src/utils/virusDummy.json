@@ -1,0 +1,84 @@
+{
+  "virusList": [
+    {
+      "id": 1,
+      "name": "꼬리붕붕",
+      "image": "src/assets/virus-imgs2/ENFP_꼬리붕붕_컬러 1.svg"
+    },
+    {
+      "id": 2,
+      "name": "말랑말랑",
+      "image": "src/assets/virus-imgs2/ENFJ_말랑말랑_컬러 1.svg"
+    },
+    {
+      "id": 3,
+      "name": "겉바속촉",
+      "image": "src/assets/virus-imgs2/ENTP_겉바속촉_컬러 1.svg"
+    },
+    {
+      "id": 4,
+      "name": "워커홀릭",
+      "image": "src/assets/virus-imgs2/ENTJ_워커홀릭_컬러 1.svg"
+    },
+    {
+      "id": 5,
+      "name": "나랑놀자",
+      "image": "src/assets/virus-imgs2/ESFP_나랑놀자_컬러 1.svg"
+    },
+    {
+      "id": 6,
+      "name": "달력폭발",
+      "image": "src/assets/virus-imgs2/ESFJ_달력폭발_컬러 1.svg"
+    },
+    {
+      "id": 7,
+      "name": "자신만만",
+      "image": "src/assets/virus-imgs2/ESTP_자신만만_컬러 1.svg"
+    },
+    {
+      "id": 8,
+      "name": "마이웨이",
+      "image": "src/assets/virus-imgs2/ESTJ_마이웨이_컬러 1.svg"
+    },
+    {
+      "id": 9,
+      "name": "무한공감",
+      "image": "src/assets/virus-imgs2/INFP_무한공감_컬러 1.svg"
+    },
+    {
+      "id": 10,
+      "name": "통찰본능",
+      "image": "src/assets/virus-imgs2/INFJ_통찰본능_컬러 3.svg"
+    },
+    {
+      "id": 11,
+      "name": "연락두절",
+      "image": "src/assets/virus-imgs2/INTP_연락두절_컬러png 1.svg"
+    },
+    {
+      "id": 12,
+      "name": "신비주의",
+      "image": "src/assets/virus-imgs2/INTJ_신비주의_컬러 1.svg"
+    },
+    {
+      "id": 13,
+      "name": "만사귀찮",
+      "image": "src/assets/virus-imgs2/ISFP_만사귀찮_컬러 1.svg"
+    },
+    {
+      "id": 14,
+      "name": "예의범절",
+      "image": "src/assets/virus-imgs2/ISFJ_예의범절_컬러 1.svg"
+    },
+    {
+      "id": 15,
+      "name": "논리분석",
+      "image": "src/assets/virus-imgs2/ISTP_논리분석_컬러 1.svg"
+    },
+    {
+      "id": 16,
+      "name": "솔직담백",
+      "image": "src/assets/virus-imgs2/ISTJ_솔직담백_컬러 1.svg"
+    }
+  ]
+}
