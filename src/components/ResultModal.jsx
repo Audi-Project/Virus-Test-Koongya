@@ -24,9 +24,7 @@ function ResultModal({ setIsModalOpen }) {
   });
   return (
     <Container ref={modalRef}>
-      {/* <ContainerTitle> */}
       <Title>바이러스 전체유형</Title>
-      {/* </ContainerTitle> */}
       <VirusListModal>
         {viruses.virusList.map(virus => (
           <Virus key={virus.id}>
@@ -35,7 +33,9 @@ function ResultModal({ setIsModalOpen }) {
           </Virus>
         ))}
       </VirusListModal>
-      <CloseButton onClick={handleModalClose}>닫기</CloseButton>
+      <CloseButton onClick={handleModalClose}>
+        <ButtonText>닫기</ButtonText>
+      </CloseButton>
     </Container>
   );
 }
@@ -49,7 +49,9 @@ const Title = tw.div`
   inline-block w-[184px] h-[28px] text-2xl mt-4 text-[#8059E6]
 `;
 const CloseButton = tw.button`
-  absolute bottom-3 w-[122px] h-[46px] left-1/2 transform -translate-x-1/2 bg-[#8152F1] shadow-[2px 2px 0px rgba(128,89,230,0.2)] rounded-[50px]
+  absolute bottom-3 w-[122px] h-[46px] left-1/2 transform -translate-x-1/2 bg-[#8152F1] shadow-[2px 2px 0px rgba(128,89,230,0.2)] rounded-[50px] leading-[33px] text-[#ffffff]
+`;
+const ButtonText = tw.span`
 `;
 const VirusListModal = tw.div`
   grid grid-rows-4 grid-cols-4 w-[329px] h-[381px] items-center gap-5
