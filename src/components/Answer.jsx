@@ -1,26 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import tw from 'tailwind-styled-components';
 
-const Answer = ({ page, setPage, val, idx }) => {
-  const [mbtiList, setMbtiList] = useState([
-    { name: 'E', count: 0 },
-    { name: 'I', count: 0 },
-    { name: 'S', count: 0 },
-    { name: 'N', count: 0 },
-    { name: 'T', count: 0 },
-    { name: 'F', count: 0 },
-    { name: 'P', count: 0 },
-    { name: 'J', count: 0 },
-  ]);
-
+const Answer = ({ page, setPage, val, idx, mbtiList, setMbtiList }) => {
   const handleClickAnswer = (type, idx) => {
-    for (let i = 0; i < mbtiList.length; i++) {
-      if (mbtiList[i].name === type) {
-        mbtiList[i].count = mbtiList[i].count + 1;
-      }
-    }
-
-    setMbtiList(mbtiList);
+    const newMbtiList =
+      mbtiList.map(mbti => {
+        if(type === mbti.type) {
+          return {...mbti, count: mbti.count + 1}
+        }
+        return mbti
+      })
+    
+    setMbtiList(newMbtiList)
     setPage(page + 1);
   };
 
@@ -50,13 +41,16 @@ const AnswerContainer = tw.div`
 const AnswerItem = tw.div`
   flex
   justify-center
+  cursor-pointer
   bg-[#DABDFC]
-  border-solid border
+  border-solid border-2
   border-slate-900
   rounded-xl
   p-5
   text-center
-  mb-5
+  mb-6
+  text-xl
+  shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]
 `;
 
 export default Answer;

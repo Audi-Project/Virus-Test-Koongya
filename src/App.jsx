@@ -1,12 +1,11 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import React, { useState } from 'react';
+import React from 'react';
 import tw from 'tailwind-styled-components';
 import StartPage from './pages/StartPage';
 import QuestionPage from './pages/QuestionPage';
 
 function App() {
-  const [page, setPage] = useState(0);
 
   return (
     <StyledApp>
@@ -14,11 +13,11 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<StartPage page={page} setPage={setPage} />}
+            element={<StartPage />}
           />
           <Route
             path="/main"
-            element={<QuestionPage page={page} setPage={setPage} />}
+            element={<QuestionPage />}
           />
         </Routes>
       </Iphone14Size>

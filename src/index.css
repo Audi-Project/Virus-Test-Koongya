@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'cookieRun';
+  src: url('./fonts/CookieRunRegular.ttf') format('truetype');
+}
+
+body {
+  font-family: 'cookieRun';
+  display: flex;
+  justify-content: center;
+}

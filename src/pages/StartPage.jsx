@@ -2,20 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import tw from 'tailwind-styled-components';
 
-const StartPage = ({ page, setPage }) => {
+const StartPage = () => {
   return (
-    <StyledF
-      onClick={() => {
-        setPage(1);
-        console.log(page);
-      }}
-    >
+    <StartContainer>
       <Link to="/main">시작 페이지입니다.</Link>
-    </StyledF>
+    </StartContainer>
   );
 };
 
-const StyledF = tw.div`
+const StartContainer = tw.div`
   border-solid
   border-2
   border-sky-500

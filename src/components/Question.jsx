@@ -5,13 +5,12 @@ const Question = ({ page, val, idx }) => {
   return (
     <QuestionContainer
       key={idx}
-      className="question"
       style={{ display: page === idx + 1 ? 'flex' : 'none' }}
     >
       {val.question.map((questionVal, questionIdx) => (
-        <div key={questionIdx} className="questionItem">
+        <QuestionItem key={questionIdx}>
           {questionVal}
-        </div>
+        </QuestionItem>
       ))}
     </QuestionContainer>
   );
@@ -20,14 +19,19 @@ const Question = ({ page, val, idx }) => {
 const QuestionContainer = tw.div`
   flex
   justify-center
+  flex-col
   bg-[#FFFFFF]
-  border-solid
-  border
+  h-60
+  border-solid border-2
   border-slate-900
   rounded-xl
   p-5
+  my-6
   text-center
-  mb-5
+  text-2xl
 `;
+
+const QuestionItem = tw.div`
+`
 
 export default Question;
