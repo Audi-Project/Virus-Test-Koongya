@@ -8,8 +8,9 @@ function ResultPage() {
   };
   return (
     <div>
-      <button onClick={handleModalOpen}>전체 유형 보기</button>
       {isModalOpen && <ResultModal setIsModalOpen={setIsModalOpen} />}
+
+      <button onClick={handleModalOpen}>전체 유형 보기</button>
     </div>
   );
 }

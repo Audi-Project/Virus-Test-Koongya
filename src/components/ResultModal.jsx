@@ -52,6 +52,7 @@ const CloseButton = tw.button`
   absolute bottom-3 w-[122px] h-[46px] left-1/2 transform -translate-x-1/2 bg-[#8152F1] shadow-[2px 2px 0px rgba(128,89,230,0.2)] rounded-[50px] leading-[33px] text-[#ffffff]
 `;
 const ButtonText = tw.span`
+text-[24px]
 `;
 const VirusListModal = tw.div`
   grid grid-rows-4 grid-cols-4 w-[329px] h-[381px] items-center gap-5
