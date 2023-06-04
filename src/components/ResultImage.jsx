@@ -2,7 +2,7 @@ import React from 'react';
 import tw from 'tailwind-styled-components';
 import { Link } from 'react-router-dom';
 import { mbtiResultImg } from '../utils/const';
-import { ShareMainToKakao } from './share/Kakao';
+import { ShareResultToKakao } from './share/Kakao';
 import ShareToFacebook from './share/Facebook';
 import ShareToTwitter from './share/Twitter';
 import ShareUrl from './share/Link';
@@ -30,7 +30,7 @@ function ResultImage({ mbtiType, handleModalOpen }) {
         <ShareContainer>
           <ShareText>
             <div className="w-[270px] h-[50px] p-1 bg-[#D8C5FD] flex items-center justify-between">
-              <ShareMainToKakao />
+              <ShareResultToKakao />
               <ShareToFacebook />
               <ShareToTwitter />
               <ShareUrl />
