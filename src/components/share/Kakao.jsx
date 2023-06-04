@@ -1,3 +1,5 @@
+import { mbtiResultImg } from '../../utils/const';
+
 export const ShareMainToKakao = () => {
   const handlePageShare = () => {
     window.Kakao.Link.sendCustom({
@@ -16,10 +18,11 @@ export const ShareMainToKakao = () => {
   );
 };
 
-export const ShareResultToKakao = () => {
+export const ShareResultToKakao = ({ mbtiType }) => {
+  let templeate = mbtiResultImg.filter(x => x.mbti === mbtiType)[0].tempId;
   const handlePageShare = () => {
     window.Kakao.Link.sendCustom({
-      templateId: 94530,
+      templateId: templeate,
     });
   };
 

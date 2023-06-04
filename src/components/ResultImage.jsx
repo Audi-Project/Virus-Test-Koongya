@@ -6,6 +6,8 @@ import { ShareResultToKakao } from './share/Kakao';
 import ShareToFacebook from './share/Facebook';
 import ShareToTwitter from './share/Twitter';
 import ShareUrl from './share/Link';
+import GoodWith from './GoodWith';
+import BadWith from './BadWith';
 
 function ResultImage({ mbtiType, handleModalOpen }) {
   const resultImage = mbtiResultImg
@@ -16,7 +18,15 @@ function ResultImage({ mbtiType, handleModalOpen }) {
   return (
     <>
       <ResultType>
-        <ResultTypeImage src={resultImage} alt="타입별 결과지" />
+        <div className="relative">
+          <ResultTypeImage
+            src={resultImage}
+            alt="타입별 결과지"
+            className="relative"
+          />
+          <GoodWith mbtiType={mbtiType} />
+          <BadWith mbtiType={mbtiType} />
+        </div>
       </ResultType>
       <ResultTypeImageBottom>
         <Link to="/">
@@ -30,7 +40,7 @@ function ResultImage({ mbtiType, handleModalOpen }) {
         <ShareContainer>
           <ShareText>
             <div className="w-[270px] h-[50px] p-1 bg-[#D8C5FD] flex items-center justify-between">
-              <ShareResultToKakao />
+              <ShareResultToKakao mbtiType={mbtiType} />
               <ShareToFacebook />
               <ShareToTwitter />
               <ShareUrl />
