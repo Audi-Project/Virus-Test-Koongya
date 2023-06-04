@@ -51,6 +51,7 @@ const AnswerItem = tw.div`
   mb-6
   text-xl
   shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]
+  active:bg-mainPurple
 `;
 
 export default Answer;
