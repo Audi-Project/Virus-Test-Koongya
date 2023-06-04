@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: 'cookieRun';
-  src: url('./fonts/CookieRunBold.ttf') format('truetype');
+  src: url('./fonts/CookieRunRegular.ttf') format('truetype');
 }
 
 body {
