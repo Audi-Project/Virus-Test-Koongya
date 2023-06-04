@@ -1,5 +1,4 @@
 import Start from './pages/Start';
-import Loading from './pages/Loading';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Error from './pages/Error';
 import Root from './pages/Root';
@@ -17,8 +16,7 @@ const router = createBrowserRouter([
         path: 'main',
         element: <QuestionPage />,
       },
-      { path: 'loading', element: <Loading /> },
-      { path: 'result', element: <ResultPage /> },
+      { path: 'result/:mbti', element: <ResultPage /> },
     ],
   },
 ]);
