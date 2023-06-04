@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import ResultModal from '../components/ResultModal';
+import ResultImage from '../components/ResultImage';
 
 function ResultPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleModalOpen = () => {
     setIsModalOpen(true);
   };
-  return (
-    <div>
-      {isModalOpen && <ResultModal setIsModalOpen={setIsModalOpen} />}
+  let mbtiType = 'INFJ';
 
-      <button onClick={handleModalOpen}>전체 유형 보기</button>
-    </div>
+  return (
+    <>
+      {isModalOpen && <ResultModal setIsModalOpen={setIsModalOpen} />}
+      <ResultImage mbtiType={mbtiType} handleModalOpen={handleModalOpen} />
+    </>
   );
 }
 

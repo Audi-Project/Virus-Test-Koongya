@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import viruses from '../utils/virusDummy.json';
 import tw from 'tailwind-styled-components';
+import viruses from '../utils/virusDummy.json';
 
 function ResultModal({ setIsModalOpen }) {
   const handleModalClose = () => {
@@ -48,21 +48,29 @@ const Container = tw.div`
 const Title = tw.div`
   inline-block w-[184px] h-[28px] text-2xl mt-4 text-[#8059E6]
 `;
+
 const CloseButton = tw.button`
-  absolute bottom-3 w-[122px] h-[46px] left-1/2 transform -translate-x-1/2 bg-[#8152F1] shadow-[2px 2px 0px rgba(128,89,230,0.2)] rounded-[50px] leading-[33px] text-[#ffffff]
+  absolute bottom-3 w-[122px] h-[46px] left-1/2 transform -translate-x-1/2 bg-[#8152F1] shadow-3xl rounded-[50px] leading-[33px] text-[#ffffff]
 `;
+
 const ButtonText = tw.span`
 text-[24px]
 `;
+
 const VirusListModal = tw.div`
   grid grid-rows-4 grid-cols-4 w-[329px] h-[381px] items-center gap-5
 `;
+
 const Virus = tw.div`
   flex-col flex justify-between h-[80.25px] mt-9
 `;
+
 const VirusImg = tw.img`
+
 `;
+
 const VirusName = tw.div`
-  text-xs
+  text-xs text-[#]
 `;
+
 export default ResultModal;
