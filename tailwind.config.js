@@ -8,6 +8,9 @@ export default {
         mainPurple: '#8152F1',
         loadingFont: '#5B3037',
       },
+      boxShadow: {
+        '3xl': '2px 2px 0px rgba(128, 89, 230, 0.2)',
+      },
     },
   },
   plugins: [],

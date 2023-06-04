@@ -1,5 +1,5 @@
 import React from 'react';
-import urlImg from '../../assets/ShareLink.svg';
+import urlImg from '../../assets/shareLink.svg';
 export default function ShareUrl() {
   const handleUrlShare = () => {
     const url = window.location.href;

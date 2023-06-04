@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ResultModal from '../components/ResultModal';
+import ResultImage from '../components/ResultImage';
 import { useParams } from 'react-router-dom';
 
 function ResultPage() {
@@ -9,11 +10,13 @@ function ResultPage() {
   const handleModalOpen = () => {
     setIsModalOpen(true);
   };
+  let mbtiType = 'INFJ';
+
   return (
-    <div>
+    <>
       {isModalOpen && <ResultModal setIsModalOpen={setIsModalOpen} />}
-      <button onClick={handleModalOpen}>전체 유형 보기</button>
-    </div>
+      <ResultImage mbtiType={mbtiType} handleModalOpen={handleModalOpen} />
+    </>
   );
 }
 
