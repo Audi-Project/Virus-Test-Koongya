@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import tw from 'tailwind-styled-components';
 import viruses from '../utils/virusDummy.json';
+import { TextLineP } from '../styles/style';
 
 function ResultModal({ setIsModalOpen }) {
   const handleModalClose = () => {
@@ -34,7 +35,9 @@ function ResultModal({ setIsModalOpen }) {
         ))}
       </VirusListModal>
       <CloseButton onClick={handleModalClose}>
-        <ButtonText>닫기</ButtonText>
+        <ButtonText>
+          <TextLineP>닫기</TextLineP>
+        </ButtonText>
       </CloseButton>
     </Container>
   );
