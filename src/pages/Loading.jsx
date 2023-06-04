@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container } from '../styles/style';
-import LoadingVirus from '../assets/loadingVirus.png';
+import LoadingVirus from '../assets/loadingVirus.svg';
 import tw from 'tailwind-styled-components';
 import 'animate.css';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 const Loading = () => {
   const navigation = useNavigate();
