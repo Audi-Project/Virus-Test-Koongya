@@ -1,10 +1,14 @@
 import React from 'react';
 import virus from '../assets/mainVirus.svg';
-import testTitle from '../assets/title.png';
 import 'animate.css';
+import testTitle from '../assets/title.png';
 import { Button, Container } from '../styles/style';
 import tw from 'tailwind-styled-components';
 import { useNavigate } from 'react-router-dom';
+import { ShareMainToKakao } from '../components/share/Kakao';
+import ShareToFacebook from '../components/share/Facebook';
+import ShareToTwitter from '../components/share/Twitter';
+import ShareUrl from '../components/share/Link';
 
 const Start = () => {
   const navigate = useNavigate();
@@ -17,7 +21,12 @@ const Start = () => {
         <img src={testTitle} alt="바이러스진단테스트" />
         <img src={virus} alt="virus" />
         <StartButton onClick={HandleToMainPage}>테스트 시작하기</StartButton>
-        <div className="w-[270px] h-[82px] bg-white">공유 컴포넌트 자리</div>
+        <div className="w-[270px] h-[50px] p-1 bg-white flex items-center justify-between">
+          <ShareMainToKakao />
+          <ShareToFacebook />
+          <ShareToTwitter />
+          <ShareUrl />
+        </div>
       </Main>
     </StartContainer>
   );
