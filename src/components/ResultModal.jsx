@@ -70,7 +70,7 @@ const VirusImg = tw.img`
 `;
 
 const VirusName = tw.div`
-  text-xs text-[#]
+  text-xs text-[#8059E6] text-center
 `;
 
 export default ResultModal;
