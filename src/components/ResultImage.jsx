@@ -1,28 +1,12 @@
 import React from 'react';
 import tw from 'tailwind-styled-components';
 import { Link } from 'react-router-dom';
-import ESFP from '../assets/result/virus-imgs2/ESFP-result.png';
-import ENFJ from '../assets/result/virus-imgs2/ENFJ-result.png';
-import ENFP from '../assets/result/virus-imgs2/ENFP-result.png';
-import ENTJ from '../assets/result/virus-imgs2/ENTJ-result.png';
-import ENTP from '../assets/result/virus-imgs2/ENTP-result.png';
-import ESFJ from '../assets/result/virus-imgs2/ESFJ-result.png';
-import ESTJ from '../assets/result/virus-imgs2/ESTJ-result.png';
-import ESTP from '../assets/result/virus-imgs2/ESTP-result.png';
-import INFJ from '../assets/result/virus-imgs2/INFJ-result.png';
-import INFP from '../assets/result/virus-imgs2/INFP-result.png';
-import INTJ from '../assets/result/virus-imgs2/INTJ-result.png';
-import INTP from '../assets/result/virus-imgs2/INTP-result.png';
-import ISFJ from '../assets/result/virus-imgs2/ISFJ-result.png';
-import ISTJ from '../assets/result/virus-imgs2/ISTJ-result.png';
-import ISTP from '../assets/result/virus-imgs2/ISTP-result.png';
-import ISFP from '../assets/result/virus-imgs2/ISFP-result.png';
+import { mbtiResultImg } from '../utils/const';
 
 function ResultImage({ mbtiType, handleModalOpen }) {
-  let resultImage;
-  if (mbtiType === 'INFJ') {
-    resultImage = INFJ;
-  }
+  const resultImage = mbtiResultImg
+    .filter(obj => obj.mbti === mbtiType)
+    .map(obj => obj.img);
 
   const handleGoMain = () => {};
   return (
