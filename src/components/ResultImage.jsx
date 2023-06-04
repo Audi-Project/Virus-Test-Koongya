@@ -8,6 +8,7 @@ import ShareToTwitter from './share/Twitter';
 import ShareUrl from './share/Link';
 import GoodWith from './GoodWith';
 import BadWith from './BadWith';
+import { TextLineP } from '../styles/style';
 
 function ResultImage({ mbtiType, handleModalOpen }) {
   const resultImage = mbtiResultImg
@@ -31,11 +32,11 @@ function ResultImage({ mbtiType, handleModalOpen }) {
       <ResultTypeImageBottom>
         <Link to="/">
           <ResultTypeImageReplay onClick={() => handleGoMain}>
-            다시 하기
+            <TextLineP>다시 하기</TextLineP>
           </ResultTypeImageReplay>
         </Link>
         <TotalTypeButton onClick={handleModalOpen}>
-          모든 유형 보기
+          <TextLineP>모든 유형 보기</TextLineP>
         </TotalTypeButton>
         <ShareContainer>
           <ShareText>

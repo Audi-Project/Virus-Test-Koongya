@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import tw from 'tailwind-styled-components';
 import virus from '../assets/ProgressBar/virus_icon.svg'
 import pill from '../assets/ProgressBar/pill_icon.svg'
 
 const ProgressBar = ({ page, idx, questionList}) => {
+  const [progressWidth, setProgressWidth] = useState(0);
 
+  useEffect(() => {
+    setProgressWidth((page / questionList.length) * 100);
+  }, [page, questionList]);
 
   return (
     <ProgressBarContainer>
@@ -17,7 +21,7 @@ const ProgressBar = ({ page, idx, questionList}) => {
         style={{ display: page === idx + 1 ? 'flex' : 'none' }}
       >
         <Progress
-          style={{ display: page === idx + 1 ? 'flex' : 'none', width: `calc((${page} / ${questionList.length}) * 100%)`}}>
+          style={{ display: page === idx + 1 ? 'flex' : 'none', width: `${progressWidth}%`}}>
         </Progress>
         <VirusIcon
           src={virus}
@@ -41,18 +45,16 @@ const ProgressBarContainer = tw.div`
 `
 
 const CurrentPage = tw.div`
-  flex
   text-xl
   mb-6
 `
+
 const Bar = tw.div`
-  flex
   items-center
-  bg-[rgba(0,0,0,0.2)]
+  bg-[#DABDFC]
   rounded-[4px]
   mb-6
   h-4
-  w-full
 `
 
 const VirusIcon = tw.img`
@@ -65,7 +67,6 @@ const VirusIcon = tw.img`
 const PillContainer = tw.div`
   flex
   justify-end
-  w-full
   mt-[-50px]
   mr-[-10px]
 `
@@ -76,11 +77,10 @@ const PillIcon = tw.img`
 `
 
 const Progress = tw.div`
-  flex
   bg-[#7000FF]
   rounded-[4px]
   h-4
-  w-[calc((1 / 12) * 100 %)]
+  ease-in-out duration-300
 `
 
 export default ProgressBar

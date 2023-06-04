@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import tw from 'tailwind-styled-components';
+import { Container } from '../styles/style';
 import ProgressBar from '../components/ProgressBar';
 import Question from '../components/Question';
 import { questionList } from '../components/QuestionList';
@@ -11,23 +12,28 @@ const QuestionPage = () => {
   const [mbti, setMbit] = useState(null);
   const [isLaoding, setIsLoading] = useState(false);
   const [mbtiList, setMbtiList] = useState([
-    { type: 'E', count: 0 },
-    { type: 'I', count: 0 },
-    { type: 'S', count: 0 },
-    { type: 'N', count: 0 },
-    { type: 'T', count: 0 },
-    { type: 'F', count: 0 },
-    { type: 'P', count: 0 },
-    { type: 'J', count: 0 },
+    { index: 1, type: 'E', count: 0 },
+    { index: 1, type: 'I', count: 0 },
+    { index: 2, type: 'S', count: 0 },
+    { index: 2, type: 'N', count: 0 },
+    { index: 3, type: 'T', count: 0 },
+    { index: 3, type: 'F', count: 0 },
+    { index: 4, type: 'P', count: 0 },
+    { index: 4, type: 'J', count: 0 },
   ]);
 
   useEffect(() => {
     if (page === 13) {
-      const sortedList = mbtiList.sort((a, b) => b.count - a.count);
-      const topFour = sortedList.slice(0, 4);
-      const topFourTypes = topFour.map(item => item.type);
-      console.log(mbtiList);
-      setMbit(topFourTypes.join(''));
+      const mbtiResultList = [];
+
+      for (let i = 1; i <= 4; i++) {
+        const filteredType = mbtiList.filter(item => item.index === i);
+        const maxType = filteredType.reduce((prev, curr) => (curr.count > prev.count ? curr : prev));
+        mbtiResultList.push(maxType);
+      }
+      const mbtiResult = mbtiResultList.map(item => item.type).join('')
+      // console.log("결과:", mbtiResult)
+      setMbit(mbtiResult);
       setIsLoading(true);
     }
   }, [page]);
@@ -56,11 +62,9 @@ const QuestionPage = () => {
   }
 };
 
-const QuestionPageContainer = tw.div`
+const QuestionPageContainer = tw(Container)`
   flex
-  justify-center
   bg-[#F0E3FF]
-  h-full
   p-5
 `;
 
