@@ -5,12 +5,11 @@ import { useParams } from 'react-router-dom';
 
 function ResultPage() {
   const { mbti } = useParams();
-  console.log(mbti);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleModalOpen = () => {
     setIsModalOpen(true);
   };
-  let mbtiType = 'INFJ';
+  let mbtiType = mbti;
 
   return (
     <>
