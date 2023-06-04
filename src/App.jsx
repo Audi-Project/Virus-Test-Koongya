@@ -4,6 +4,7 @@ import Loading from './pages/Loading';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Error from './pages/Error';
 import Root from './pages/Root';
+import ResultPage from './pages/ResultPage';
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
         element: <p>질문지페이지</p>,
       },
       { path: 'loading', element: <Loading /> },
-      { path: 'result', element: <p>결과지페이지</p> },
+      { path: 'result', element: <ResultPage /> },
     ],
   },
 ]);
