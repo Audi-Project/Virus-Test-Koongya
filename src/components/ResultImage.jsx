@@ -2,6 +2,10 @@ import React from 'react';
 import tw from 'tailwind-styled-components';
 import { Link } from 'react-router-dom';
 import { mbtiResultImg } from '../utils/const';
+import { ShareMainToKakao } from './share/Kakao';
+import ShareToFacebook from './share/Facebook';
+import ShareToTwitter from './share/Twitter';
+import ShareUrl from './share/Link';
 
 function ResultImage({ mbtiType, handleModalOpen }) {
   const resultImage = mbtiResultImg
@@ -24,7 +28,14 @@ function ResultImage({ mbtiType, handleModalOpen }) {
           모든 유형 보기
         </TotalTypeButton>
         <ShareContainer>
-          <ShareText>테스트 공유하기</ShareText>
+          <ShareText>
+            <div className="w-[270px] h-[50px] p-1 bg-[#D8C5FD] flex items-center justify-between">
+              <ShareMainToKakao />
+              <ShareToFacebook />
+              <ShareToTwitter />
+              <ShareUrl />
+            </div>
+          </ShareText>
           <ShareButton />
         </ShareContainer>
       </ResultTypeImageBottom>
@@ -51,7 +62,7 @@ text-[22px] w-[180px] h-[52px] left-1/2 bg-[#8152F1] shadow-3xl rounded-[50px] t
 `;
 
 const ShareContainer = tw.div`
-w-[250px] h-[100px] bg-white mt-10
+  mt-12
 `;
 
 const ShareText = tw.span`
