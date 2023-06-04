@@ -10,7 +10,6 @@ const QuestionPage = () => {
   const [page, setPage] = useState(1);
   const [mbti, setMbit] = useState(null);
   const [isLaoding, setIsLoading] = useState(false);
-  const [first, setFirst] = useState(true);
   const [mbtiList, setMbtiList] = useState([
     { type: 'E', count: 0 },
     { type: 'I', count: 0 },
@@ -22,7 +21,7 @@ const QuestionPage = () => {
     { type: 'J', count: 0 },
   ]);
 
-  if (first) {
+  useEffect(() => {
     if (page === 13) {
       const sortedList = mbtiList.sort((a, b) => b.count - a.count);
       const topFour = sortedList.slice(0, 4);
@@ -30,9 +29,8 @@ const QuestionPage = () => {
       console.log(mbtiList);
       setMbit(topFourTypes.join(''));
       setIsLoading(true);
-      setFirst(false);
     }
-  }
+  }, [page]);
 
   if (!isLaoding) {
     return (
