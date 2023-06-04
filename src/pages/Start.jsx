@@ -2,14 +2,13 @@ import React from 'react';
 import virus from '../assets/mainVirus.svg';
 import 'animate.css';
 import testTitle from '../assets/title.png';
-import { Button, Container } from '../styles/style';
+import { Button, Container, TextLineP } from '../styles/style';
 import tw from 'tailwind-styled-components';
 import { useNavigate } from 'react-router-dom';
 import { ShareMainToKakao } from '../components/share/Kakao';
 import ShareToFacebook from '../components/share/Facebook';
 import ShareToTwitter from '../components/share/Twitter';
 import ShareUrl from '../components/share/Link';
-import styled from 'styled-components';
 
 const Start = () => {
   const navigate = useNavigate();
@@ -45,11 +44,6 @@ items-center justify-center
 
 const StartButton = tw(Button)`
 w-[280px] h-[78px]  text-[34px] text-white
-`;
-
-const TextLineP = styled.p`
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000. -1px 1px 0 #000,
-    1px 1px 0 #000;
 `;
 
 export default Start;
