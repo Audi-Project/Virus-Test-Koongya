@@ -2,7 +2,7 @@ import React from 'react';
 import virus from '../assets/mainVirus.svg';
 import 'animate.css';
 import testTitle from '../assets/title.png';
-import { Button, Container } from '../styles/style';
+import { Button, Container, TextLineP } from '../styles/style';
 import tw from 'tailwind-styled-components';
 import { useNavigate } from 'react-router-dom';
 import { ShareMainToKakao } from '../components/share/Kakao';
@@ -20,7 +20,9 @@ const Start = () => {
       <Main>
         <img src={testTitle} alt="바이러스진단테스트" />
         <img src={virus} alt="virus" />
-        <StartButton onClick={HandleToMainPage}>테스트 시작하기</StartButton>
+        <StartButton onClick={HandleToMainPage} onTouchEnd={HandleToMainPage}>
+          <TextLineP>테스트 시작하기</TextLineP>
+        </StartButton>
         <div className="w-[270px] h-[50px] p-1 bg-white flex items-center justify-between">
           <ShareMainToKakao />
           <ShareToFacebook />
