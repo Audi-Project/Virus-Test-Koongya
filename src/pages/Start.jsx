@@ -5,10 +5,10 @@ import testTitle from '../assets/title.png';
 import { Button, Container } from '../styles/style';
 import tw from 'tailwind-styled-components';
 import { useNavigate } from 'react-router-dom';
-import { ShareMainToKakao } from '../share/Kakao';
-import ShareToFacebook from '../share/Facebook';
-import ShareToTwitter from '../share/Twitter';
-import ShareUrl from '../share/Link';
+import { ShareMainToKakao } from '../components/share/Kakao';
+import ShareToFacebook from '../components/share/Facebook';
+import ShareToTwitter from '../components/share/Twitter';
+import ShareUrl from '../components/share/Link';
 
 const Start = () => {
   const navigate = useNavigate();

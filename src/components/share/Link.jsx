@@ -1,8 +1,5 @@
 import React from 'react';
-import tw from 'tailwind-styled-components';
-
-import urlImg from '../assets/ShareLink.svg';
-
+import urlImg from '../../assets/ShareLink.svg';
 export default function ShareUrl() {
   const handleUrlShare = () => {
     const url = window.location.href;
@@ -10,7 +7,6 @@ export default function ShareUrl() {
       .writeText(url)
       .then(() => alert('링크가 복사되었습니다.'));
   };
-
   return (
     <button
       type="button"
