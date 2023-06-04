@@ -31,9 +31,11 @@ function ResultImage({ mbtiType, handleModalOpen }) {
         <ResultTypeImage src={resultImage} alt="타입별 결과지" />
       </ResultType>
       <ResultTypeImageBottom>
-        <ResultTypeImageReplay onClick={() => handleGoMain}>
-          <Link to="/">다시 하기</Link>
-        </ResultTypeImageReplay>
+        <Link to="/">
+          <ResultTypeImageReplay onClick={() => handleGoMain}>
+            다시 하기
+          </ResultTypeImageReplay>
+        </Link>
         <TotalTypeButton onClick={handleModalOpen}>
           모든 유형 보기
         </TotalTypeButton>
