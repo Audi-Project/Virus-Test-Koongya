@@ -1,21 +1,27 @@
-import './App.css';
-import tw from 'tailwind-styled-components';
+import Start from './pages/Start';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Root from './pages/Root';
+import QuestionPage from './pages/QuestionPage';
+import ResultPage from './pages/ResultPage';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Root />,
+    errorElement: <Start />,
+    children: [
+      { index: true, element: <Start /> },
+      {
+        path: 'main',
+        element: <QuestionPage />,
+      },
+      { path: 'result/:mbti', element: <ResultPage /> },
+    ],
+  },
+]);
 
 function App() {
-  return (
-    <>
-      <h1 className="text-red-500">how to use Tailwind</h1>
-      <H>how to use Tailwind styled-compoenents</H>
-      <p>아래 링크에서 vscode setting 하셔야합니다</p>
-      <a href="https://www.npmjs.com/package/tailwind-styled-components">
-        클릭하세요
-      </a>
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
-
-const H = tw.h1`
-  text-red-500
-`;
 
 export default App;
