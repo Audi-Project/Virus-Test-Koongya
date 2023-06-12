@@ -10,7 +10,7 @@ import Loading from '../components/Loading';
 const QuestionPage = () => {
   const [page, setPage] = useState(1);
   const [mbti, setMbit] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [mbtiList, setMbtiList] = useState([
     { index: 1, type: 'E', count: 0 },
     { index: 1, type: 'I', count: 0 },

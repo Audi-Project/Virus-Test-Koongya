@@ -14,7 +14,6 @@ export const mbtiResultImg = [
     mbti: 'ENFP',
     img: '../assets/result/virus-imgs2/ENFP-result.png',
     tempId: 94598,
-    ㄴㄴㄴㄴㄴㄴㄴ,
   },
   {
     mbti: 'ENTJ',
@@ -23,7 +22,7 @@ export const mbtiResultImg = [
   },
   {
     mbti: 'ENTP',
-    img: '../src/assets/result/virus-imgs2/ENTP-result.png',
+    img: '../assets/result/virus-imgs2/ENTP-result.png',
     tempId: 94596,
   },
   {
@@ -38,7 +37,7 @@ export const mbtiResultImg = [
   },
   {
     mbti: 'INFP',
-    img: '../src/assets/result/virus-imgs2/INFP-result.png',
+    img: '../assets/result/virus-imgs2/INFP-result.png',
     tempId: 94593,
   },
   {
