@@ -10,7 +10,7 @@ import Loading from '../components/Loading';
 const QuestionPage = () => {
   const [page, setPage] = useState(1);
   const [mbti, setMbit] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [mbtiList, setMbtiList] = useState([
     { index: 1, type: 'E', count: 0 },
     { index: 1, type: 'I', count: 0 },
@@ -26,41 +26,45 @@ const QuestionPage = () => {
     if (page !== 13) {
       return;
     }
-  
     const mbtiResultList = [1, 2, 3, 4].map(i => {
       const filteredType = mbtiList.filter(item => item.index === i);
-      return filteredType.reduce((prev, curr) => (curr.count > prev.count ? curr : prev));
+      return filteredType.reduce((prev, curr) =>
+        curr.count > prev.count ? curr : prev,
+      );
     });
-  
+
     const mbtiResult = mbtiResultList.map(item => item.type).join('');
     setMbit(mbtiResult);
     setIsLoading(true);
   }, [page]);
 
   return (
-    <QuestionPageContainer>
-      {!isLoading && questionList.map((val, idx) => (
-        <QuestionAnswer key={idx}>
-          <ProgressBar page={page} idx={idx} questionList={questionList} />
-          <Question page={page} val={val} idx={idx} />
-          <Answer
-            page={page}
-            val={val}
-            idx={idx}
-            setPage={setPage}
-            mbtiList={mbtiList}
-            setMbtiList={setMbtiList}
-          />
-        </QuestionAnswer>
-      ))}
+    <>
+      {!isLoading && (
+        <QuestionPageContainer>
+          {questionList.map((val, idx) => (
+            <QuestionAnswer key={idx}>
+              <ProgressBar page={page} idx={idx} questionList={questionList} />
+              <Question page={page} val={val} idx={idx} />
+              <Answer
+                page={page}
+                val={val}
+                idx={idx}
+                setPage={setPage}
+                mbtiList={mbtiList}
+                setMbtiList={setMbtiList}
+              />
+            </QuestionAnswer>
+          ))}
+        </QuestionPageContainer>
+      )}
       {isLoading && <Loading mbti={mbti} />}
-    </QuestionPageContainer>
+    </>
   );
 };
 
 const QuestionPageContainer = tw(Container)`
   flex
-  bg-[#F0E3FF]
   p-5
 `;
 

@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        bgPurple: '#F0E9FF',
+        bgPurple: '#F0E3FF',
         mainPurple: '#8152F1',
         loadingFont: '#5B3037',
       },
