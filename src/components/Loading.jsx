@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container } from '../styles/style';
-import LoadingVirus from '../assets/loadingVirus.svg';
+import LoadingVirus from '/assets/loadingVirus.svg';
 import tw from 'tailwind-styled-components';
 import 'animate.css';
 import styled, { keyframes } from 'styled-components';

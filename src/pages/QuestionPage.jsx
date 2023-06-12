@@ -10,7 +10,7 @@ import Loading from '../components/Loading';
 const QuestionPage = () => {
   const [page, setPage] = useState(1);
   const [mbti, setMbit] = useState(null);
-  const [isLaoding, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [mbtiList, setMbtiList] = useState([
     { index: 1, type: 'E', count: 0 },
     { index: 1, type: 'I', count: 0 },
@@ -38,7 +38,7 @@ const QuestionPage = () => {
     }
   }, [page]);
 
-  if (!isLaoding) {
+  if (!isLoading) {
     return (
       <QuestionPageContainer>
         {questionList.map((val, idx) => (
@@ -57,7 +57,7 @@ const QuestionPage = () => {
         ))}
       </QuestionPageContainer>
     );
-  } else if (isLaoding) {
+  } else if (isLoading) {
     return <Loading mbti={mbti} />;
   }
 };

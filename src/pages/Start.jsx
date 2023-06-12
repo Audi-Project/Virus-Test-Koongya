@@ -1,7 +1,7 @@
 import React from 'react';
-import virus from '../assets/mainVirus.svg';
+import virus from '/assets/mainVirus.svg';
 import 'animate.css';
-import testTitle from '../assets/title.png';
+import testTitle from '/assets/title.png';
 import { Button, Container, TextLineP } from '../styles/style';
 import tw from 'tailwind-styled-components';
 import { useNavigate } from 'react-router-dom';
