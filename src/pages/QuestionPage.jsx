@@ -10,7 +10,7 @@ import Loading from '../components/Loading';
 const QuestionPage = () => {
   const [page, setPage] = useState(1);
   const [mbti, setMbit] = useState(null);
-  const [isLaoding, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [mbtiList, setMbtiList] = useState([
     { index: 1, type: 'E', count: 0 },
     { index: 1, type: 'I', count: 0 },
@@ -23,43 +23,39 @@ const QuestionPage = () => {
   ]);
 
   useEffect(() => {
-    if (page === 13) {
-      const mbtiResultList = [];
-
-      for (let i = 1; i <= 4; i++) {
-        const filteredType = mbtiList.filter(item => item.index === i);
-        const maxType = filteredType.reduce((prev, curr) => (curr.count > prev.count ? curr : prev));
-        mbtiResultList.push(maxType);
-      }
-      const mbtiResult = mbtiResultList.map(item => item.type).join('')
-      // console.log("결과:", mbtiResult)
-      setMbit(mbtiResult);
-      setIsLoading(true);
+    if (page !== 13) {
+      return;
     }
+  
+    const mbtiResultList = [1, 2, 3, 4].map(i => {
+      const filteredType = mbtiList.filter(item => item.index === i);
+      return filteredType.reduce((prev, curr) => (curr.count > prev.count ? curr : prev));
+    });
+  
+    const mbtiResult = mbtiResultList.map(item => item.type).join('');
+    setMbit(mbtiResult);
+    setIsLoading(true);
   }, [page]);
 
-  if (!isLaoding) {
-    return (
-      <QuestionPageContainer>
-        {questionList.map((val, idx) => (
-          <QuestionAnswer key={idx}>
-            <ProgressBar page={page} idx={idx} questionList={questionList} />
-            <Question page={page} val={val} idx={idx} />
-            <Answer
-              page={page}
-              val={val}
-              idx={idx}
-              setPage={setPage}
-              mbtiList={mbtiList}
-              setMbtiList={setMbtiList}
-            />
-          </QuestionAnswer>
-        ))}
-      </QuestionPageContainer>
-    );
-  } else if (isLaoding) {
-    return <Loading mbti={mbti} />;
-  }
+  return (
+    <QuestionPageContainer>
+      {!isLoading && questionList.map((val, idx) => (
+        <QuestionAnswer key={idx}>
+          <ProgressBar page={page} idx={idx} questionList={questionList} />
+          <Question page={page} val={val} idx={idx} />
+          <Answer
+            page={page}
+            val={val}
+            idx={idx}
+            setPage={setPage}
+            mbtiList={mbtiList}
+            setMbtiList={setMbtiList}
+          />
+        </QuestionAnswer>
+      ))}
+      {isLoading && <Loading mbti={mbti} />}
+    </QuestionPageContainer>
+  );
 };
 
 const QuestionPageContainer = tw(Container)`
