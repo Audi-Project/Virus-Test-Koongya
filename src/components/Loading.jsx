@@ -18,12 +18,15 @@ const Loading = ({ mbti }) => {
   return (
     <LoadingContainer>
       <LoadingP>진단서를 작성하고 있습니다</LoadingP>
-      <CloudDiv>
+      <CloudDiv className="animate-motion">
         <img src={LoadingVirus} alt="로딩중" />
       </CloudDiv>
       <div className="flex flex-col justify-center items-center">
         <LoadingP>나의 바이러스 유형</LoadingP>
-        <LoadingP>분석 중...</LoadingP>
+        <div className="flex">
+          <LoadingP>분석 중</LoadingP>
+          <LoadingP className="animate-typing overflow-hidden">...</LoadingP>
+        </div>
       </div>
     </LoadingContainer>
   );
@@ -38,20 +41,7 @@ text-loadingFont text-[22px]
 `;
 
 const CloudDiv = styled.div`
-  animation: motion 1s linear infinite alternate;
   margin-top: 0;
-
-  @keyframes motion {
-    0% {
-      transform: translateY(15px);
-    }
-    50% {
-      transform: translateY(0px);
-    }
-    100% {
-      transform: translateY(-15px);
-    }
-  }
 `;
 
 export default Loading;
