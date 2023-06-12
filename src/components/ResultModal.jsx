@@ -4,10 +4,11 @@ import viruses from '../utils/virusDummy.json';
 import { TextLineP } from '../styles/style';
 
 function ResultModal({ setIsModalOpen }) {
+  const modalRef = useRef(null);
+
   const handleModalClose = () => {
     setIsModalOpen(false);
   };
-  const modalRef = useRef(null);
 
   useEffect(() => {
     const handleModalOutClick = event => {

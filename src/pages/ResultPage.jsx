@@ -9,12 +9,11 @@ function ResultPage() {
   const handleModalOpen = () => {
     setIsModalOpen(true);
   };
-  let mbtiType = mbti;
 
   return (
     <>
       {isModalOpen && <ResultModal setIsModalOpen={setIsModalOpen} />}
-      <ResultImage mbtiType={mbtiType} handleModalOpen={handleModalOpen} />
+      <ResultImage mbtiType={mbti} handleModalOpen={handleModalOpen} />
     </>
   );
 }
