@@ -1,7 +1,7 @@
 import { TwitterShareButton, TwitterIcon } from 'react-share';
 
 const ShareToTwitter = () => {
-  const url = 'http://localhost:5173/';
+  const url = window.location.href;
   const title = '[MBTI TEST] VIRUS 테스트';
 
   return (

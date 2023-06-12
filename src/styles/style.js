@@ -14,3 +14,7 @@ export const TextLineP = styled.p`
   text-shadow: -2px -2px 0 #6938ea, 2px -2px 0 #6938ea, -2px 2px 0 #6938ea,
     2px 2px 0 #6938ea;
 `;
+
+export const ShareBtns = tw.div`
+w-[270px] h-[50px] p-1 bg-transparent flex items-center justify-evenly self-center
+`;
