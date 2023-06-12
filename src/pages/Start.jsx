@@ -21,7 +21,7 @@ const Start = () => {
       <Main>
         <img src={testTitle} alt="바이러스진단테스트" />
         <img src={virus} alt="virus" />
-        <StartButton onClick={HandleToMainPage} onTouchEnd={HandleToMainPage}>
+        <StartButton onClick={HandleToMainPage}>
           <TextLineP>테스트 시작하기</TextLineP>
         </StartButton>
         <ShareBtns>
