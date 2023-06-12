@@ -9,6 +9,7 @@ import ShareUrl from './share/Link';
 import GoodWith from './GoodWith';
 import BadWith from './BadWith';
 import { TextLineP } from '../styles/style';
+import { ShareBtns } from '../styles/style';
 
 function ResultImage({ mbtiType, handleModalOpen }) {
   const resultImage = mbtiResultImg
@@ -40,12 +41,12 @@ function ResultImage({ mbtiType, handleModalOpen }) {
         </TotalTypeButton>
         <ShareContainer>
           <ShareText>
-            <div className="w-[270px] h-[50px] p-1 bg-[#D8C5FD] flex items-center justify-between">
+            <ShareBtns>
               <ShareResultToKakao mbtiType={mbtiType} />
               <ShareToFacebook />
               <ShareToTwitter />
               <ShareUrl />
-            </div>
+            </ShareBtns>
           </ShareText>
           <ShareButton />
         </ShareContainer>
