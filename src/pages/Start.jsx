@@ -35,7 +35,7 @@ const Start = () => {
 };
 
 const Main = tw.div`
-h-min-content flex flex-col justify-center gap-16 
+h-min-content flex flex-col justify-center gap-16 items-center
 `;
 
 const StartContainer = tw(Container)`
