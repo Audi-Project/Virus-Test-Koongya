@@ -3,7 +3,7 @@ import tw from 'tailwind-styled-components';
 import styled from 'styled-components';
 
 export const Container = tw.div`
-  w-[360px] h-screen bg-bgPurple flex flex-col
+  w-[390px] h-screen bg-bgPurple flex flex-col
 `;
 
 export const Button = tw.button`
