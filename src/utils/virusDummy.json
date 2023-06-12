@@ -3,82 +3,82 @@
     {
       "id": 1,
       "name": "꼬리붕붕",
-      "image": "../src/assets/result/virus-imgs2/ENFP.svg"
+      "image": "./virus-imgs2/ENFP.svg"
     },
     {
       "id": 2,
       "name": "말랑말랑",
-      "image": "../src/assets/result/virus-imgs2/ENFJ.svg"
+      "image": "./virus-imgs2/ENFJ.svg"
     },
     {
       "id": 3,
       "name": "겉바속촉",
-      "image": "../src/assets/result/virus-imgs2/ENTP.svg"
+      "image": "./virus-imgs2/ENTP.svg"
     },
     {
       "id": 4,
       "name": "워커홀릭",
-      "image": "../src/assets/result/virus-imgs2/ENTJ.svg"
+      "image": "./virus-imgs2/ENTJ.svg"
     },
     {
       "id": 5,
       "name": "나랑놀자",
-      "image": "../src/assets/result/virus-imgs2/ESFP.svg"
+      "image": "./virus-imgs2/ESFP.svg"
     },
     {
       "id": 6,
       "name": "달력폭발",
-      "image": "../src/assets/result/virus-imgs2/ESFJ.svg"
+      "image": "./virus-imgs2/ESFJ.svg"
     },
     {
       "id": 7,
       "name": "자신만만",
-      "image": "../src/assets/result/virus-imgs2/ESTP.svg"
+      "image": "./virus-imgs2/ESTP.svg"
     },
     {
       "id": 8,
       "name": "마이웨이",
-      "image": "../src/assets/result/virus-imgs2/ESTJ.svg"
+      "image": "./virus-imgs2/ESTJ.svg"
     },
     {
       "id": 9,
       "name": "무한공감",
-      "image": "../src/assets/result/virus-imgs2/INFP.svg"
+      "image": "./virus-imgs2/INFP.svg"
     },
     {
       "id": 10,
       "name": "통찰본능",
-      "image": "../src/assets/result/virus-imgs2/INFJ.svg"
+      "image": "./virus-imgs2/INFJ.svg"
     },
     {
       "id": 11,
       "name": "연락두절",
-      "image": "../src/assets/result/virus-imgs2/INTP.svg"
+      "image": "./virus-imgs2/INTP.svg"
     },
     {
       "id": 12,
       "name": "신비주의",
-      "image": "../src/assets/result/virus-imgs2/INTJ.svg"
+      "image": "./virus-imgs2/INTJ.svg"
     },
     {
       "id": 13,
       "name": "만사귀찮",
-      "image": "../src/assets/result/virus-imgs2/ISFP.svg"
+      "image": "./virus-imgs2/ISFP.svg"
     },
     {
       "id": 14,
       "name": "예의범절",
-      "image": "../src/assets/result/virus-imgs2/ISFJ.svg"
+      "image": "./virus-imgs2/ISFJ.svg"
     },
     {
       "id": 15,
       "name": "논리분석",
-      "image": "../src/assets/result/virus-imgs2/ISTP.svg"
+      "image": "./virus-imgs2/ISTP.svg"
     },
     {
       "id": 16,
       "name": "솔직담백",
-      "image": "../src/assets/result/virus-imgs2/ISTJ.svg"
+      "image": "./virus-imgs2/ISTJ.svg"
     }
   ]
 }
